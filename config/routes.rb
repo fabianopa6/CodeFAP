@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
 
+
 root 'login#index'
+
+
+  get 'login/index'
+
+  get 'dashboard_professor/index'
+
+  get 'dashboard_student/index'
+
 
 resources :login
 
-  match 'admin', controller: 'login', action: 'doLogin', via: 'POST' 
+resources :dashboard_student
+
+resources :dashboard_professor
+
+
+  match 'login', controller: 'login', action: 'doLogin', via: 'POST'
 
 
 
