@@ -8,14 +8,14 @@
 <body>
 
 
-<form class="box" >
+<div class="box" >
 
       <div class="textindex2">
         <p>Seja Bem-Vindo!</p>
         <p></p>
       </div>
 
-  <%= form_for @user, :url => {:action => "doLogin"} do |f|  %>
+  <%= form_for @user, :url => {:action => "doLogin2"} do |f|  %>
 
       <div class="form-group">
         <%= f.text_field :login, :autofocus => true, class: "form-control", placeholder: "Matrícula" ,value:""%></td>
@@ -30,7 +30,7 @@
       </div>
   <%end%>
 
-</form>
+</div>
 
 <div class="img-center">
         <%= image_tag("codefap.png", :class =>"img-responsive") %>

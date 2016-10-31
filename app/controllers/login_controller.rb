@@ -1,12 +1,14 @@
 class LoginController < ApplicationController
 
 	def index
+		puts "asdsadsadasdsad"
 		@user = User.new
 	end
 
 
-	def doLogin
-		redirect_to dashboard_professor_index_path
+	def doLogin2
+
+		redirect_to :controller => "dashboard_student"
 	end
 
 
