@@ -1,14 +1,20 @@
 class LoginController < ApplicationController
 
 	def index
-		puts "asdsadsadasdsad"
+		puts "Login realizado com sucesso!"
 		@user = User.new
 	end
 
 
-	def doLogin2
+	def doLogin
 
-		redirect_to :controller => "dashboard_student"
+		@user = User.new params.require(:user).permit(:login, :password, :user_type)
+
+		if @user.user_type == "student"
+			redirect_to :controller => "dashboard_student"
+		elsif @user.user_type == "professor"
+			redirect_to :controller => "dashboard_professor"
+		end
 	end
 
 

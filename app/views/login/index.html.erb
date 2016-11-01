@@ -15,7 +15,7 @@
         <p></p>
       </div>
 
-  <%= form_for @user, :url => {:action => "doLogin2"} do |f|  %>
+  <%= form_for @user, :url => {:action => "doLogin"} do |f|  %>
 
       <div class="form-group">
         <%= f.text_field :login, :autofocus => true, class: "form-control", placeholder: "Matrícula" ,value:""%></td>
@@ -23,6 +23,10 @@
 
       <div class="form-group">
         <%= f.password_field :password ,class: "form-control", placeholder: "Senha"%></td>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :user_type ,class: "form-control", placeholder: "Tipo"%></td>
       </div>
 
       <div class="form-group" align="right">
